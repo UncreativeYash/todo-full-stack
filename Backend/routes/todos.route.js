@@ -4,8 +4,10 @@ const todosController = require("../controllers/todos.controller")
 
 
 router.post('/', todosController.createTodo);
-router.get('/', todosController.getTodos);
-
+router.get('/', todosController.getAllTodos);
+router.get('/:id', todosController.getOneTodo);
+router.put('/:id', todosController.updateATodo);
+router.delete('/:id', todosController.deleteATodo);
 
 module.exports = router;
 
