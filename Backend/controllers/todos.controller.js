@@ -63,6 +63,7 @@ const todoController = {
   
       // update the todo with the new data
       todo.title = req.body.title;
+      todo.tasks = req.body.tasks;
   
       // save the updated todo to the database
       const updatedTodo = await todo.save();
